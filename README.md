@@ -23,25 +23,32 @@
 
 ## Quick Start
 
-1. (ทางเลือก) กำหนด backend image ที่ต้องการ
+1. Clone โปรเจกต์จาก GitHub และเข้าโฟลเดอร์
 
 ```bash
-export BACKEND_IMAGE=alphabay0220/youtube-transcript-backend:latest
+git clone https://github.com/buggy2002/backend-youtube-transcript.git
+cd backend-youtube-transcript
 ```
 
-2. รันทุกบริการ
+2. ดึง Docker images ตามที่ระบุใน `docker-compose.yml`
+
+```bash
+docker compose pull
+```
+
+3. รันทุกบริการ
 
 ```bash
 docker compose up -d
 ```
 
-3. ตรวจสอบสถานะ
+4. ตรวจสอบสถานะ
 
 ```bash
 docker compose ps
 ```
 
-4. ทดสอบ health endpoint ของ backend
+5. ทดสอบ health endpoint ของ backend
 
 ```bash
 curl http://localhost:8000/api/health
